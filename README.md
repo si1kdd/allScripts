@@ -1,5 +1,8 @@
 # allScripts
-My Unix like system scripts collection, for enviroment debugging and administation.
+
+* My Unix like system scripts collection, for environment debugging and administration.
+* A repo for me to backup some code snippets.
+
 
 ### TODO
-- A categories
+- A categories.
