@@ -4,5 +4,5 @@
 * A repo for me to backup some code snippets.
 
 
-### TODO
-- A categories.
+### TODO:
+- Create a category.
