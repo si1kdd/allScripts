@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @ Function
-#       Just a lazy script to install kvm stuff on RHEL/CentOS platform.
+#       Just a script to install kvm stuff on RHEL/CentOS.
 #
 # @ Usage:
 #       ./centos_install_kvm.sh
