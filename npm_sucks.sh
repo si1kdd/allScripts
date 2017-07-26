@@ -3,7 +3,7 @@
 #       When npm dependency sucks, use this lazy scripts.
 #
 # @ Usage:
-#       ./npm_sucks.sh $DIR
+#       ./npm_sucks.sh
 #
 # @ Author:
 #       si1kdd
