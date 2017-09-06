@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # @ Function
-#       A tiny shell script to confirm the environment, in or not in Virtual Machine.
+#       A tiny shell script to confirm the environment, inside a Virtual Machine or not.
 #
 # @ Usage:
 #       ./vm_or_phyiscal.sh

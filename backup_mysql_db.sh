@@ -22,8 +22,8 @@ DATA_DUMP=$BACKUP_DB_PATH-$DATE.sql
 
 echo "[*] Delete Old backup data ... "
 sleep 10
-DATE_N=`date -d "-30 day" +%Y%m%d`
-rm -r $BACKUP_DB_PATH-$DATE_N*
+N_DATA=`date -d "-30 day" +%Y%m%d`
+rm -r $BACKUP_DB_PATH-$N_DATA*
 
 echo "[*] Backup data ... "
 sleep 5
@@ -38,4 +38,4 @@ echo "[*] Delete Dump data ... "
 rm -r $DATA_DUMP
 
 
-# TODO. better Intereaction and support different DB.
+# TODO. better user interaction and support different DBs.
