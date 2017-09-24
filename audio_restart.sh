@@ -10,7 +10,7 @@
 # @ Author:
 #       si1kdd
 
-if command -v pulseaudio > /dev/null 2>&1; then
+if ! command -v pulseaudio > /dev/null 2>&1; then
         echo "[!] pulseaudio not found, please install the audio tools ..."
         exit -1
 fi

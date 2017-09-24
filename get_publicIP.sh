@@ -3,7 +3,7 @@
 #       Check the gateway/outgoing machine IP, in 3 different way.
 #
 # @ Usage:
-#       ./Get_public_IP.sh
+#       ./get_public_IP.sh
 #
 # @ Author:
 #       si1kdd
