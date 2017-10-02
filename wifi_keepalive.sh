@@ -4,23 +4,26 @@
 #
 # @ Usage:
 #       use crontab under root.
-#       You can run it per 3 minute.
+#       You can run it per 5 or 10 minute.
 #
 # @ Author:
 #       si1kdd
+#
+# @ Status:
+#       Unfinished ...
 
 HOST=www.google.com
 
-ping -c 1 -W 10 $HOST &> /dev/null
-
-if command -v nmcli > /dev/null 2>&1; then
+if ! command -v nmcli > /dev/null 2>&1; then
         echo "[!] You don't have nmcli installed, please install it first ..."
         exit -1
 fi
 
-echo "[+] WIFI reconnecting ..."
+echo "[+] WIFI Checking ..."
 
+ping -c 1 -W 10 $HOST &> /dev/null
 if [ $? -eq 0 ]; then
+        echo "[+] Network connected !"
         exit 1
 else
         # Be careful, if your have been setup WIFI auto reconnect.
@@ -37,6 +40,7 @@ else
         ping -c 1 -W 10 $HOST &> /dev/null
 
         if [ $? -eq 0 ]; then
+                echo "[+] WIFI Reconnected !"
                 exit
         else
                 /etc/init.d/networking restart
@@ -45,4 +49,3 @@ else
         fi
 fi
 
-echo "[+] WIFI connected !"
