@@ -12,22 +12,22 @@ RED="\e[0;49;31m"
 GREEN="\e[0;49;32m"
 END="\e[0m"
 
-function uefi() {
+uefi() {
         echo -e "[!] Your system booted as ${RED}UEFI${END}"
         BOOT="UEFI"
 }
 
-function bios() {
+bios() {
         echo -e "[!] Your system booted as ${GREEN}BIOS${END}"
         BOOT="BIOS"
 }
 
-function check_boot() {
+check_boot() {
         [ -d /sys/firmware/efi  ] && uefi || bios
         echo "---------------------------------------"
 }
 
-function check_super_user() {
+check_super_user() {
         if [ "$EUID" -ne 0 ]; then
                 echo "[!] Please run as root or use 'sudo' command ..."
                 echo "          This scripts need privilege. (And only tested on CentOS and Arch Linux)"
@@ -35,7 +35,7 @@ function check_super_user() {
         fi
 }
 
-function show() {
+show() {
         echo "The kernel you installed : "
 
         if [[ ! -z $BOOT && $BOOT == "UEFI" ]]; then

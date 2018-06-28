@@ -18,7 +18,7 @@ if ! command -v nmcli > /dev/null 2>&1; then
         exit -1
 fi
 
-function wifi_check() {
+wifi_check() {
 	echo "[+] WIFI Checking ..."
 	ping -c 1 -W 10 $HOST &> /dev/null
 	if [ $? -eq 0 ]; then
@@ -51,4 +51,4 @@ echo "[!] Restart NetworkManager"
 
 wifi_check
 
-echo "[X] Network is unreachable ..." 
+echo "[X] Network is unreachable ..."

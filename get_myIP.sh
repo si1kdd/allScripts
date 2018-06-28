@@ -25,7 +25,7 @@ echo -e "[+] $color_blu2 IP information: (By akamai server) $color_end"
 my_public_ip=`dig whoami.akamai.net. @ns1-1.akamaitech.net. +short`
 
 if ! command -v whois > /dev/null 2>&1; then
-        echo -e "[!] $color_pur Please install 'whois' command first ! $color_end"
+        echo -e "[!] $color_pur Please install 'whois' or 'dig' command first ! $color_end"
 fi
 whois $my_public_ip | grep -Ei 'inetnum|netrange|netname|descr|cidr|organization|orgname|country'
 echo -e "[+] Public IP:$color_gre1 $my_public_ip $color_end"

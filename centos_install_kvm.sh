@@ -12,7 +12,7 @@ DNF="dnf"
 YUM="yum"
 USE=""
 
-function command_exists() {
+command_exists() {
         if ! [ -x "$(command -v $1)" ]; then
                 return 1
         else
@@ -20,7 +20,7 @@ function command_exists() {
         fi
 }
 
-function check_dnf_exists() {
+check_dnf_exists() {
         # check dnf exists or not.
         if command_exists $DNF; then
                 echo "[*] dnf installed, using dnf."
@@ -34,7 +34,7 @@ function check_dnf_exists() {
         fi
 }
 
-function install_kvm() {
+install_kvm() {
         check_dnf_exists
         if [[ ! -z $USE ]]; then
                 $USE -y groupinstall "Virtualization"

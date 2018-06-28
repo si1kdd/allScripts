@@ -8,7 +8,7 @@
 # @ Author:
 #       si1kdd
 
-function check_super_user() {
+check_super_user() {
         if [ "$EUID" -ne 0 ]; then
                 echo "[!] Please run as root or use 'sudo' command ..."
                 echo "          This scripts need privilege. (And only tested on CentOS and Arch Linux)"

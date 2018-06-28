@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # A small script to check timestamp now,
-# 
+#
 # Windows:
 #       Use win32 structure directly
 # Unix:
 #       use datetime module
 #
 #
-# 
+#
 # @ Usage:
 #       ./timestamp.py
 # @ Autor:

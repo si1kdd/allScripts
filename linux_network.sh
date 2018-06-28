@@ -12,7 +12,7 @@
 # @ Status:
 #       Unfinished ...
 
-function dns_list() {
+dns_list() {
         echo "[*] Print Out DNS Server Query Status ... "
 
         # Suppose all Linux distro would use systemd as init system ...

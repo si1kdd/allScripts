@@ -14,18 +14,18 @@
 
 set -e
 
-function msg_help() {
+msg_help() {
         echo "[*] Usage: ./$0 PACKAGE_NAME"
         exit -1
 }
 
-function check_upgrade() {
+check_upgrade() {
         upgrade=$(pacman -Qu | wc -l)
         echo "[+] Now Total $upgrade packages could being upgrade."
         exit 1
 }
 
-function check_super_user() {
+check_super_user() {
         if [ "$EUID" -ne 0 ]; then
                 echo "[!] Please run as root or use 'sudo' command ..."
                 echo "          This scripts need privilege. (And only tested on CentOS and Arch Linux)"
